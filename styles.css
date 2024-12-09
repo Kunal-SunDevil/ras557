@@ -1,52 +1,132 @@
-/* General styles */
+/* General Styles */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Roboto', sans-serif; /* Robotic font style */
     margin: 0;
     padding: 0;
-    background-color: #f9f9f9;
-    color: #333;
+    background-color: #1a1a2e; /* Dark background for a futuristic look */
+    color: #eaeaea;
     line-height: 1.6;
 }
 
-/* Header styles */
+/* Header Styles */
 header {
     text-align: center;
-    padding: 20px 0;
-    background-color: #0044cc;
-    color: white;
-}
-
-/* Main content styles */
-main {
-    margin: 20px auto;
-    max-width: 800px;
     padding: 20px;
-    background-color: white;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
-}
-
-h2, h3 {
-    color: #0044cc;
-}
-
-/* Footer styles */
-footer {
-    text-align: center;
-    padding: 10px;
-    background-color: #0044cc;
+    background: linear-gradient(90deg, #00d4ff, #007acc); /* Futuristic gradient */
     color: white;
-    margin-top: 20px;
-    position: relative;
-    bottom: 0;
-    width: 100%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-transform: uppercase;
+    letter-spacing: 2px;
 }
 
-/* List styling */
+header h1 {
+    font-size: 2.5em;
+    margin: 0;
+}
+
+/* Main Content Styles */
+main {
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #27293d; /* Dark card-like background */
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+h2 {
+    color: #00d4ff;
+    border-bottom: 2px solid #007acc;
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+}
+
+section {
+    margin-bottom: 30px;
+}
+
+p, li {
+    font-size: 1.1em;
+}
+
+/* List Styling */
 ul, ol {
     padding-left: 20px;
 }
 
-ul li, ol li {
-    margin-bottom: 8px;
+li {
+    margin-bottom: 10px;
+    position: relative;
+}
+
+li::before {
+    content: "⦿"; /* Adds a robotic bullet point */
+    color: #00d4ff;
+    font-size: 1.2em;
+    position: absolute;
+    left: -25px;
+}
+
+/* Table Styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: #1e1e30;
+    color: #eaeaea;
+}
+
+table th, table td {
+    border: 1px solid #3a3a55;
+    padding: 10px;
+    text-align: left;
+}
+
+table th {
+    background-color: #007acc;
+    color: white;
+    text-transform: uppercase;
+    font-size: 0.9em;
+}
+
+table tr:nth-child(even) {
+    background-color: #29293f;
+}
+
+/* Footer Styles */
+footer {
+    text-align: center;
+    padding: 15px 0;
+    background: linear-gradient(90deg, #007acc, #00d4ff);
+    color: white;
+    margin-top: 20px;
+    text-transform: uppercase;
+    font-size: 0.9em;
+    letter-spacing: 1px;
+}
+
+/* Hover Effects */
+header h1:hover, h2:hover, li:hover {
+    color: #00e0ff; /* Bright hover effect */
+    cursor: pointer;
+}
+
+table th:hover {
+    background-color: #00d4ff;
+}
+
+/* Link Styling */
+a {
+    color: #00d4ff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #00e0ff;
+}
+
+/* Box Shadow Effects */
+main, table, footer {
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
