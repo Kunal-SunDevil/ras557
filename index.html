@@ -74,8 +74,30 @@
             <img src="Simulation Files/motor_input.png" alt="hi" style="max-width: 100%; height: auto; display: block; margin: 0 auto;" />
             <p>Static Simulation:</p>
             <p>First, a static simulation was carried to track the end effector trajectory and gait cycle generated using the input angles. For this, the robot is suspended at a height where feet doesn't touch the floor which disables the robot movement along the axis.
-            The statis simulation can be viewed below, from the animation, it can be seen that all joints and angles are very well defined.</p>
+            The static simulation can be viewed below, from the animation, it can be seen that all joints and angles are very well defined.</p>
             <img src="Simulation Files/Static.gif" alt="hi" style="max-width: 100%; height: auto; display: block; margin: 0 auto;" />
+            <p> The end effector position was stored to plot, visualize and validate with the final robot experimental data. The end effector trajectory during static simulation is as follows: </p>
+            <img src="Simulation Files/endeffsim.png" alt="hi" style="max-width: 100%; height: auto; display: block; margin: 0 auto;" />
+
+            <p>Dynamic Simulation: </p>
+            <p> For this part, the support height was reduced and fixed at a constant height, enough for the feet to touch the floor and enable motion forward. The dynamic simulation can be seen here which shows that the robot's gait is correct and the movement is on.</p>
+            <img src="Simulation Files/dynam.gif" alt="hi" style="max-width: 100%; height: auto; display: block; margin: 0 auto;" />
+            <p>The end effector trajectory of both legs: </p>
+            <img src="Simulation Files/endeff_dyn.png" alt="hi" style="max-width: 100%; height: auto; display: block; margin: 0 auto;" />
+
+            <p>Optimization: </p>
+            <p>The effect of end effector length can now be studied by varying the aforementioned parameter and tracking the end effector position. An arbitrary range was selected to simulate the robot's end effector trajectory
+            for different end effector lenghts, the simulation run was defined within a function that iterates the loop accordingly and outputs the end effector trajectory for each and different link lengths.</p>
+            <img src="Simulation Files/endeff_dyn.png" alt="hi" style="max-width: 100%; height: auto; display: block; margin: 0 auto;" />
+            <p> The distance travelled by the robot in 10 seconds was taken as an objectove function and optimized across the range of link lengths and a peak was identified where robot travels the most with an optimal link length, this can be seen fromt he plot below,</p>
+            <img src="Simulation Files/optim.png" alt="hi" style="max-width: 100%; height: auto; display: block; margin: 0 auto;" />
+
+            <p>Final Dynamic Simulation: </p>
+            <p>Using the optimized link length, simulation reveals the final dynamic performance of the robot's gait cycle for 10 seconds..</p>
+            <img src="Simulation Files/finamsim.gif" alt="hi" style="max-width: 100%; height: auto; display: block; margin: 0 auto;" />
+
+
+        
         </p>
     </section>
 
