@@ -34,6 +34,10 @@ main {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
+main p {
+    text-align: justify; /* Justify paragraphs */
+}
+
 h2 {
     color: #800000; /* Maroon */
     border-bottom: 2px solid #a00000; /* Darker maroon */
