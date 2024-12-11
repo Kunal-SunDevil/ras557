@@ -4,7 +4,7 @@ body {
     margin: 0;
     padding: 0;
     background-color: #ffffff; /* White background */
-    color: #eaeaea;
+    color: #000000; /* Black text */
     line-height: 1.6;
 }
 
@@ -29,14 +29,14 @@ main {
     max-width: 900px;
     margin: 20px auto;
     padding: 20px;
-    background-color: #27293d; /* Dark card-like background */
+    background-color: #ffffff; /* White background */
     border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 h2 {
-    color: #00d4ff;
-    border-bottom: 2px solid #007acc;
+    color: #800000; /* Maroon */
+    border-bottom: 2px solid #a00000; /* Darker maroon */
     padding-bottom: 5px;
     margin-bottom: 15px;
 }
@@ -47,6 +47,7 @@ section {
 
 p, li {
     font-size: 1.1em;
+    color: #000000; /* Black text */
 }
 
 /* List Styling */
@@ -61,7 +62,7 @@ li {
 
 li::before {
     content: "⦿"; /* Adds a robotic bullet point */
-    color: #00d4ff;
+    color: #800000; /* Maroon bullet point */
     font-size: 1.2em;
     position: absolute;
     left: -25px;
@@ -72,25 +73,25 @@ table {
     width: 100%;
     border-collapse: collapse;
     margin-top: 20px;
-    background-color: #1e1e30;
-    color: #eaeaea;
+    background-color: #ffffff; /* White background */
+    color: #000000; /* Black text */
 }
 
 table th, table td {
-    border: 1px solid #3a3a55;
+    border: 1px solid #c0c0c0;
     padding: 10px;
     text-align: left;
 }
 
 table th {
-    background-color: #007acc;
+    background-color: #800000; /* Maroon */
     color: white;
     text-transform: uppercase;
     font-size: 0.9em;
 }
 
 table tr:nth-child(even) {
-    background-color: #29293f;
+    background-color: #f9f9f9; /* Light gray rows for alternating effect */
 }
 
 /* Footer Styles */
@@ -107,26 +108,26 @@ footer {
 
 /* Hover Effects */
 header h1:hover, h2:hover, li:hover {
-    color: #00e0ff; /* Bright hover effect */
+    color: #c00000; /* Bright maroon hover effect */
     cursor: pointer;
 }
 
 table th:hover {
-    background-color: #00d4ff;
+    background-color: #a00000; /* Darker maroon hover */
 }
 
 /* Link Styling */
 a {
-    color: #00d4ff;
+    color: #800000; /* Maroon links */
     text-decoration: none;
     transition: color 0.3s ease;
 }
 
 a:hover {
-    color: #00e0ff;
+    color: #a00000; /* Darker maroon hover */
 }
 
 /* Box Shadow Effects */
 main, table, footer {
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
