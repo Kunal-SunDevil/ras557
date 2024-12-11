@@ -101,78 +101,144 @@
 
     <section id="Manufacturing">
         <h2>Manufacturing Planning</h2>
+    
+        <!-- Design Process -->
         <h3>Design Process</h3>
         <p>
-            The bipedal robot features a modular design architecture that can be broken down into three primary components: the main body structure, the five-bar leg mechanism, and the end-effector knee, each fabricated independently to ensure precision and ease of modification. This modular approach was specifically engineered to facilitate comprehensive research on end-effector length effects. The legs were designed with quick-release mechanisms that seamlessly interface with the primary five-bar mechanism, while the motors remain securely mounted to the robot's structural plane.
+            The bipedal robot features a modular design architecture that can be broken down into three primary components: the main body structure, the five-bar leg mechanism, and the end-effector knee, each fabricated independently to ensure precision and ease of modification. 
+            This modular approach was specifically engineered to facilitate comprehensive research on end-effector length effects. 
+            The legs were designed with quick-release mechanisms that seamlessly interface with the primary five-bar mechanism, while the motors remain securely mounted to the robot's structural plane.
         </p>
-
+    
         <p>This thoughtful design architecture offers several significant advantages:</p>
-
         <ol>
             <li>
                 <strong>Experimental flexibility:</strong> The modular components allow researchers to swap different leg configurations while maintaining consistent motor positioning and control parameters, enabling precise comparative analysis of end-effector performance.
             </li>
-            
             <li>
                 <strong>Mechanical stability:</strong> The strategic mounting of motors directly to the structural plane minimizes unwanted vibrations and ensures precise control over leg movements, regardless of end-effector length variations.
             </li>
-            
             <li>
                 <strong>Systematic data collection:</strong> The ability to rapidly interchange leg lengths while keeping other variables constant facilitates methodical investigation of how end-effector length influences critical performance metrics, including energy efficiency, gait stability, and dynamic response.
             </li>
-            
             <li>
                 <strong>Design optimization:</strong> Independent fabrication of each component not only simplifies maintenance and replacement but also enables iterative testing of various configurations to determine optimal setups for specific locomotion tasks or environmental conditions.
             </li>
-            
             <li>
                 <strong>Assembly efficiency:</strong> The separation of components into distinct modules streamlines both the initial assembly process and subsequent modifications, reducing downtime between experimental trials and facilitating rapid prototyping of new design iterations.
             </li>
         </ol>
-        
+    
         <p>
-            A few dimensions were chosen for the five bar mechanism as seen below in the figure.
-            <img src="dxf_files/LegFiveBarDimensions.png" alt="hi" style="max-width: 100%; height: auto; display: block; margin: 0 auto;" />
+            A few dimensions were chosen for the five-bar mechanism as seen in the figure below:
         </p>
-
+        <div style="margin: 20px 0;">
+            <img src="dxf_files/LegFiveBarDimensions.png" alt="Five-Bar Dimensions" style="max-width: 100%; height: auto; display: block; margin: 0 auto;" />
+        </div>
+    
         <p>
-            The legs were subsequently integrated with the body layer through a precise mounting process. This central structural layer serves as the foundation, with servo motors securely fastened to provide controlled actuation. The legs were strategically positioned and mounted on opposite sides of the body, ensuring balanced weight distribution and optimal mechanical advantage for the robot's movements. This configuration can be observed in detail in the illustration below, which demonstrates the spatial arrangement of these critical components.
-            <img src="dxf_files/BodyLayer.png" alt="hi" style="max-width: 100%; height: auto; display: block; margin: 0 auto;" />
+            The legs were subsequently integrated with the body layer through a precise mounting process. This central structural layer serves as the foundation, with servo motors securely fastened to provide controlled actuation. 
+            The legs were strategically positioned and mounted on opposite sides of the body, ensuring balanced weight distribution and optimal mechanical advantage for the robot's movements. 
+            This configuration can be observed in detail in the illustration below:
         </p>
-
+        <div style="margin: 20px 0;">
+            <img src="dxf_files/BodyLayer.png" alt="Body Layer" style="max-width: 100%; height: auto; display: block; margin: 0 auto;" />
+        </div>
+    
+        <!-- Manufacturing Process -->
         <h3>Manufacturing Process</h3>
         <h4>Bipedal Robot rev 1.0</h4>
-        
+    
+        <div style="display: flex; align-items: stretch;">
+            <div style="flex: 1; padding-right: 20px;">
+                <p>
+                    For the initial prototype fabrication, a precise five-layer laminate structure was designed to achieve optimal mechanical properties. The structure begins with a rigid cardstock base layer that provides fundamental structural support, followed by an adhesive layer ensuring secure bonding.
+                    The critical middle layer consists of a thin plastic film, specifically engineered for creating flexible joints within the mechanism. This flexible layer is then secured by a second adhesive layer, and the structure is completed with another cardstock layer, forming a symmetrical and robust sandwich configuration.
+                </p>
+            </div>
+            <div style="flex: 1; display: flex; justify-content: center; align-items: center;">
+                <img src="dxf_files/rev1.0/Figures/LaminateStructure1.png" alt="Laminate Structure" style="max-width: 100%; height: 80%; max-height: 350px;" />
+            </div>
+        </div>
         <p>
-            For the initial prototype fabrication, a precise five-layer laminate structure was designed to achieve optimal mechanical properties. The structure begins with a rigid cardstock base layer that provides fundamental structural support, followed by an adhesive layer ensuring secure bonding. The critical middle layer consists of a thin plastic film, specifically engineered for creating flexible joints within the mechanism. This flexible layer is then secured by a second adhesive layer, and the structure is completed with another cardstock layer, forming a symmetrical and robust sandwich configuration. This carefully engineered layering system creates a balance between structural integrity and controlled flexibility, where the outer cardstock layers provide rigidity while the central plastic film enables precise joint movement at designated locations.
-            <img src="dxf_files/rev1.0/Figures/LaminateStructure1.png" alt="hi" style="max-width: 100%; height: auto; display: block; margin: 0 auto;" />
-
+            This carefully engineered layering system creates a balance between structural integrity and controlled flexibility, where the outer cardstock layers provide rigidity while the central plastic film enables precise joint movement at designated locations.
+        </p>
+        <p>
             Following the established manufacturing workflow, each layer is modified with simple plain hinges at joint locations to facilitate interconnection between different body segments. The individual layer designs are illustrated below:
-            <div style="margin: 20px 0;">
-                <img src="dxf_files/rev1.0/Figures/RigidLayer.png" alt="hi" style="max-width: 100%; height: auto; display: block; margin: 0 auto;" />
-            </div>
-            <div style="margin: 20px 0;">
-                <img src="dxf_files/rev1.0/Figures/AdhesiveLayer.png" alt="hi" style="max-width: 100%; height: auto; display: block; margin: 0 auto;" />
-            </div>
-            <div style="margin: 20px 0;">
-                <img src="dxf_files/rev1.0/Figures/FlexibleLayer.png" alt="hi" style="max-width: 100%; height: auto; display: block; margin: 0 auto;" />
-            </div>
-            <div style="margin: 20px 0;">
-                <img src="dxf_files/rev1.0/Figures/FinalCut.png" alt="hi" style="max-width: 100%; height: auto; display: block; margin: 0 auto;" />
-            </div>
-
         </p>
-        <h4>Bipedal Robot rev 2.0</h4>
+        <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 40px; margin: 20px 0; align-items: center;">
+            <div style="text-align: center;">
+                <img src="dxf_files/rev1.0/Figures/RigidLayer.png" alt="Rigid Layer" style="max-width: 100%; height: auto; max-height: 300px;" />
+                <p>Rigid Layers cut from Cardstock</p>
+            </div>
+            <div style="text-align: center;">
+                <img src="dxf_files/rev1.0/Figures/AdhesiveLayer.png" alt="Adhesive Layer" style="max-width: 100%; height: auto; max-height: 300px;" />
+                <p>Adhesive Layers cut from heat-activated adhesive</p>
+            </div>
+            <div style="text-align: center;">
+                <img src="dxf_files/rev1.0/Figures/FlexibleLayer.png" alt="Flexible Layer" style="max-width: 100%; height: auto; max-height: 300px;" />
+                <p>Flexible Layers cut from thin mylar sheet</p>
+            </div>
+            <div style="text-align: center;">
+                <img src="dxf_files/rev1.0/Figures/FinalCut.png" alt="Final Cut" style="max-width: 100%; height: auto; max-height: 300px;" />
+                <p>Final Cut files to release the flexible mechanism</p>
+            </div>
+        </div>
+    
         <p>
-            To fabricate the initial prototype, a laminate structure was chosen that comprises of five precisely assembled layers that balance rigidity and flexibility. 
-            The first layer is cardstock material, providing the primary structural foundation, followed by an adhesive backing layer. 
-            The middle layer consists of a thin plastic film, crucial for creating flexure joints. 
-            This is secured by another adhesive layer, and finally topped with a second cardstock layer, creating a robust sandwich structure. 
-            This symmetrical configuration optimizes mechanical properties, with the outer cardstock layers providing strength, adhesive layers ensuring structural integrity, and the central plastic film enabling controlled flexibility at joint locations. 
-            <img src="dxf_files/LaminateStructure1.png" alt="hi" style="max-width: 100%; height: auto; display: block; margin: 0 auto;" />
+            Following successful laminate fabrication, the completed structure appears as shown below:
         </p>
+        <div style="margin: 20px 0;">
+            <img src="dxf_files/rev1.0/Figures/FinalCutLaminates.png" alt="Final Laminate" style="max-width: 100%; height: auto; display: block; margin: 0 auto;" />
+        </div>
+    
+        <p>
+            The assembly process of the robot begins with integrating the fabricated laminate structures into a functional mechanism. 
+            The body laminate serves as the central mounting platform, where servo adapters are securely fastened using nuts and bolts at precisely designated locations shown in the previous illustration.
+        </p>
+        <div style="margin: 20px 0;">
+            <img src="dxf_files/rev1.0/Figures/ServoMount.png" alt="Servo Mount" style="max-width: 100%; height: auto; display: block; margin: 0 auto;" />
+        </div>
+        <p>
+            Snap connectors are strategically positioned and attached at specific points on the body laminate, creating secure attachment points that facilitate the integration of the five-bar mechanism and leg components with the main body. 
+            These snap connectors are essential as they allow for both robust mechanical connection and easy disassembly when needed, enhancing the modularity and maintainability of the robot design.
+        </p>
+
+        <p>
+            The final assembled robot looks something like this     
+        </p>
+        <div style="margin: 20px 0;">
+            <img src="dxf_files/rev1.0/Figures/AssembledRobot.jpg" alt="Servo Mount" style="max-width: 100%; height: auto; display: block; margin: 0 auto;" />
+        </div>
+
+        <h4>Bipedal Robot rev 2.0</h4>
+    
+        <div style="display: flex; align-items: stretch;">
+            <div style="flex: 1; padding-right: 20px;">
+                <p>
+                    Initial testing of the cardstock-based robot prototype revealed significant structural limitations that impacted its performance. The joints and links exhibited vulnerability to failure during operation, and the structure lacked sufficient rigidity to maintain stable positioning. Most notably, the robot body demonstrated undesirable flexing during servo motor actuation, compromising precise control and movement accuracy.
+                    To address these structural deficiencies, we implemented a comprehensive material upgrade by transitioning to a more robust five-layer fiberglass laminate design.
+                </p>
+            </div>
+            <div style="flex: 1; display: flex; justify-content: center; align-items: center;">
+                <img src="dxf_files/rev2.0/Figures/LaminateStructure.png" alt="Laminate Structure" style="max-width: 100%; height: 80%; max-height: 350px;" />
+            </div>
+        </div>
+        <p>
+            This enhanced material composition delivered substantial improvements in mechanical performance, providing superior rigidity and enabling the robot to maintain stable positioning with improved self-supporting capabilities.
+            However, this material transition presented both advantages and challenges. While the fiberglass structure significantly enhanced the robot's rigidity and structural integrity, it also introduced several trade-offs. The overall weight of the robot increased notably due to the denser material composition. The original snap connector system had to be replaced with a more robust nut-and-bolt assembly method to accommodate the increased structural demands while preserving the design's modularity. Additionally, the cost of fabrication increased substantially due to the more expensive materials and complex manufacturing process required for fiberglass laminates.
+            This evolution in design represents a careful balance between structural performance and practical considerations, where enhanced mechanical properties were achieved at the expense of increased weight, assembly complexity, and manufacturing cost.   
+        </p>    
+        <p>
+            While maintaining the same design files and fabrication process from the previous version, we optimized the manufacturing approach for efficiency. The five-bar leg mechanism was constructed using the complete five-layer laminate structure, whereas the body was simplified to a two-layer design. The top and bottom layers of the body were individually laser cut and then connected using standoffs, maintaining structural integrity while reducing production time.
+            This hybrid approach preserved the design's core functionality while streamlining the manufacturing process, effectively balancing structural requirements with fabrication efficiency.
+        </p>
+        <div style="margin: 20px 0;">
+            <img src="dxf_files/rev2.0/Figures/AssembledRobotRev2.png" alt="Servo Mount" style="max-width: 100%; height: auto; display: block; margin: 0 auto;" />
+        </div>
 
     </section>
+    
 
     <section id="Experiment">
         <h2>Experimental Analysis</h2>
