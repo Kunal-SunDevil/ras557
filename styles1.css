@@ -102,25 +102,11 @@ footer {
     letter-spacing: 1px;
 }
 
-/* Hover Effects */
-header h1:hover, h2:hover, li:hover {
-    color: #c00000; /* Bright maroon hover effect */
-    cursor: pointer;
-}
-
-table th:hover {
-    background-color: #a00000; /* Darker maroon hover */
-}
-
 /* Link Styling */
 a {
     color: #800000; /* Maroon links */
     text-decoration: none;
     transition: color 0.3s ease;
-}
-
-a:hover {
-    color: #a00000; /* Darker maroon hover */
 }
 
 /* Box Shadow Effects */
