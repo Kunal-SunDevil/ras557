@@ -88,19 +88,44 @@
             <p>Optimization: </p>
             <p>The effect of end effector length can now be studied by varying the aforementioned parameter and tracking the end effector position. An arbitrary range was selected to simulate the robot's end effector trajectory
             for different end effector lenghts, the simulation run was defined within a function that iterates the loop accordingly and outputs the end effector trajectory for each and different link lengths.</p>
-            <img src="Simulation Files/endeff_dyn.png" alt="hi" style="max-width: 100%; height: auto; display: block; margin: 0 auto;" />
+            <img src="Simulation Files/walktrajs.png" alt="hi" style="max-width: 100%; height: auto; display: block; margin: 0 auto;" />
             <p> The distance travelled by the robot in 10 seconds was taken as an objectove function and optimized across the range of link lengths and a peak was identified where robot travels the most with an optimal link length, this can be seen fromt he plot below,</p>
             <img src="Simulation Files/optim.png" alt="hi" style="max-width: 100%; height: auto; display: block; margin: 0 auto;" />
 
             <p>Final Dynamic Simulation: </p>
             <p>Using the optimized link length, simulation reveals the final dynamic performance of the robot's gait cycle for 10 seconds..</p>
             <img src="Simulation Files/finamsim.gif" alt="hi" style="max-width: 100%; height: auto; display: block; margin: 0 auto;" />
-
-
-        
         </p>
     </section>
 
+
+    <section id="Manufacturing">
+        <h2>Manufacturing Planning</h2>
+        <p>
+            To be Filled
+            
+        </p>
+    </section>
+
+    <section id="Experiment">
+        <h2>Experimental Analysis</h2>
+        <p> 
+            After manufacturing the robot and uploading the code onto the microcontroller, the robot was ready to be tested. Similar to simulation studies, the robot was tested in static and dynamic conditions to observe the effect of end effector length on trajectory.
+            <p>Static Testing: </p>
+            <p>In this testing, the robot was suspended at a height where contact is absent between feet and ground and microcontrolled was turned on, with the help of video recording and a tracker software, the end effector position was tracked as shown below"</p>
+            <img src="Simulation Files/track_end.gif" alt="hi" style="max-width: 100%; height: auto; display: block; margin: 0 auto;" />
+            <p>Validation: </p>
+            <img src="Simulation Files/EndEffectorComparison.png" alt="hi" style="max-width: 100%; height: auto; display: block; margin: 0 auto;" />
+            <p>As shown above, it can be seen that the error is minimum between the end effector trajectory from simulation and experimental results which validates our robot's design and control.</p>
+            <p>Dynamic Testing: </p>
+            <p>For this, the robot is suspended at a height using a cable which enables contact between feet and ground and the motion/gait of the robot was observed. The speed of the robot was calculated to compare between simulation and experiment.</p>
+            <video style="max-width: 100%; height: auto; display: block; margin: 0 auto;" controls>
+              <source src="finalexp.mp4" type="video/mp4">
+            </video>
+        
+        
+        </p>
+    </section>
 <!--     <section id="performance-metrics">
         <h2>Performance Metrics</h2>
         <table>
