@@ -65,9 +65,12 @@
     <section id="Mujoco">
         <h2>Simulation study</h2>
         <p>
-            Using MuJoCo, the five bar mechanism based bipedal robot was simulated.
-            <img src="Simulation Files/dynam.gif" alt="hi" style="max-width: 100%; height: auto; display: block; margin: 0 auto;" />
-            Two positional arguements are given to verify the kinematic linkages of the five bar mechanism as shown in the figure below. This validates the mechanism and the effect of input joint angles to the end effector position.
+            Using MuJoCo, the five bar mechanism based bipedal robot was simulated. First, the xml template was created which takes the variables robot support height, joint angles and end effector lengths as input arguements.
+            <p> The support height helps in suspending robot at different heights to enable static or dynamic simulation to study the end effector position, this inturn helps in studying the effect of end effector length on the gait trajectory </p>
+            <p> The end effector angles is a primary variable that is being optimized as a goal of this project, the xml template takes end effector length as variable and converts accordingly to fit the joint definitions within the xml. </p>
+            <p> The simulation setup is as shown in figure below. </p>
+            <img src="Simulation Files/simsetup.png" alt="hi" style="max-width: 100%; height: auto; display: block; margin: 0 auto;" />
+            <p> Four input angles, two for each leg are to be controlled using motors defined within the xml template. The angles are generated to simulate a walking trajectory as shown in the figure for one leg. These angles are again implemented in the other leg with appropriate phase difference. </p>
             <img src="Simulation Files/motor_input.png" alt="hi" style="max-width: 100%; height: auto; display: block; margin: 0 auto;" />
             
         </p>
