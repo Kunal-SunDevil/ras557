@@ -64,14 +64,6 @@ li {
     position: relative;
 }
 
-li::before {
-    content: "⦿"; /* Adds a robotic bullet point */
-    color: #800000; /* Maroon bullet point */
-    font-size: 1.2em;
-    position: absolute;
-    left: -25px;
-}
-
 /* Table Styling */
 table {
     width: 100%;
