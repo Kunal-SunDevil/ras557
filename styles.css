@@ -131,10 +131,4 @@ main, table, footer {
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
-responsive-image {
-    max-width: 100%; /* Ensures the image doesn’t exceed the container's width */
-    height: auto;   /* Maintains the aspect ratio */
-    display: block; /* Removes inline gap (optional, based on your layout) */
-    margin: 0 auto; /* Centers the image horizontally if needed */
-}
 
