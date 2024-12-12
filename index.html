@@ -18,7 +18,7 @@
         <p>
             This project focuses on the development of a bipedal robot using a 5-bar linkage mechanism. 
             Inspired by the biomechanics of bird locomotion, the robot mimics natural gait walking pattern.
-            <img src="Media\gaitostr.png" alt="ostrich_gait" style="max-width: 100%; height: auto; display: block; margin: 0 auto;" />
+            <img src="media\gaitostr.png" alt="ostrich_gait" style="max-width: 100%; height: auto; display: block; margin: 0 auto;" />
             
             Using a five-bar linkage system leveraging the foldable mechanism, the biomimicry of an ostrich's legs mimics the intricate, 
             multi-joint motions of real limbs, offering important insights into bipedal biomechanics. This design makes smoother and more flexible 
@@ -55,9 +55,9 @@
         <p>
             The legs of this robot are designed based on a five-bar linkage mechanism. Because the device is essentially a planar five-bar linkage with one link extended, it has two degrees of freedom. 
             It also has two motors, which drive the upper two angles of the device. Choosing arbitrary length for the links, the kinematics of the mechanism is as shown in the figure below.
-            <img src="Media\Kinematics\kinem.png" alt="kinematic_diag" style="max-width: 100%; height: auto; display: block; margin: 0 auto;" />
+            <img src="media\Kinematics\kinem.png" alt="kinematic_diag" style="max-width: 100%; height: auto; display: block; margin: 0 auto;" />
             Two positional arguements are given to verify the kinematic linkages of the five bar mechanism as shown in the figure below. This validates the mechanism and the effect of input joint angles to the end effector position.
-            <img src="Media\Kinematics\kinem_final.png" alt="final_kinematic" style="max-width: 100%; height: auto; display: block; margin: 0 auto;" />
+            <img src="media\Kinematics\kinem_final.png" alt="final_kinematic" style="max-width: 100%; height: auto; display: block; margin: 0 auto;" />
             
         </p>
     </section>
@@ -69,32 +69,32 @@
             <p> The support height helps in suspending robot at different heights using a prismatic joint (this joint helps the robot to move in one axis) to enable static or dynamic simulation to study the end effector position, this inturn helps in studying the effect of end effector length on the gait trajectory </p>
             <p> The end effector angles is a primary variable that is being optimized as a goal of this project, the xml template takes end effector length as variable and converts accordingly to fit the joint definitions within the xml. </p>
             <p> The simulation setup is as shown in figure below. </p>
-            <img src="Media\Static\simsetup.png" alt="simulation_setup" style="max-width: 100%; height: auto; display: block; margin: 0 auto;" />
+            <img src="media\Static\simsetup.png" alt="simulation_setup" style="max-width: 100%; height: auto; display: block; margin: 0 auto;" />
             <p> Four input angles, two for each leg are to be controlled using motors defined within the xml template. The angles are generated to simulate a walking trajectory as shown in the figure for one leg. These angles are again implemented in the other leg with appropriate phase difference. </p>
-            <img src="Media\Dynamic\motor_input.png" alt="motor_input" style="max-width: 100%; height: auto; display: block; margin: 0 auto;" />
+            <img src="media\Dynamic\motor_input.png" alt="motor_input" style="max-width: 100%; height: auto; display: block; margin: 0 auto;" />
             <p>Static Simulation:</p>
             <p>First, a static simulation was carried to track the end effector trajectory and gait cycle generated using the input angles. For this, the robot is suspended at a height where feet doesn't touch the floor which disables the robot movement along the axis.
             The static simulation can be viewed below, from the animation, it can be seen that all joints and angles are very well defined.</p>
-            <img src="Media\Static\simulation_static.gif" alt="simulation_static" style="max-width: 100%; height: auto; display: block; margin: 0 auto;" />
+            <img src="media\Static\simulation_static.gif" alt="simulation_static" style="max-width: 100%; height: auto; display: block; margin: 0 auto;" />
             <p> The end effector position was stored to plot, visualize and validate with the final robot experimental data. The end effector trajectory during static simulation is as follows: </p>
-            <img src="Media\Static\simulated_endeff_trajectory.png" alt="simulated_endeff_trajectory" style="max-width: 100%; height: auto; display: block; margin: 0 auto;" />
+            <img src="media\Static\simulated_endeff_trajectory.png" alt="simulated_endeff_trajectory" style="max-width: 100%; height: auto; display: block; margin: 0 auto;" />
 
             <p>Dynamic Simulation: </p>
             <p> For this part, the support height was reduced and fixed at a constant height, enough for the feet to touch the floor and enable motion forward. The dynamic simulation can be seen here which shows that the robot's gait is correct and the movement is on.</p>
-            <img src="Media\Dynamic\simulation.gif" alt="simulation" style="max-width: 100%; height: auto; display: block; margin: 0 auto;" />
+            <img src="media\Dynamic\simulation.gif" alt="simulation" style="max-width: 100%; height: auto; display: block; margin: 0 auto;" />
             <p>The end effector trajectory of both legs: </p>
-            <img src="Media\Dynamic\simulated_endeff_tracjectory.png" alt="simulated_endeff_tracjectory" style="max-width: 100%; height: auto; display: block; margin: 0 auto;" />
+            <img src="media\Dynamic\simulated_endeff_tracjectory.png" alt="simulated_endeff_tracjectory" style="max-width: 100%; height: auto; display: block; margin: 0 auto;" />
 
             <p>Optimization: </p>
             <p>The effect of end effector length can now be studied by varying the aforementioned parameter and tracking the end effector position. An arbitrary range was selected to simulate the robot's end effector trajectory
             for different end effector lenghts, the simulation run was defined within a function that iterates the loop accordingly and outputs the end effector trajectory for each and different link lengths.</p>
-            <img src="Media\Dynamic\walktrajs.png" alt="walktrajs" style="max-width: 100%; height: auto; display: block; margin: 0 auto;" />
+            <img src="media\Dynamic\walktrajs.png" alt="walktrajs" style="max-width: 100%; height: auto; display: block; margin: 0 auto;" />
             <p> The distance travelled by the robot in 10 seconds was taken as an objectove function and optimized across the range of link lengths and a peak was identified where robot travels the most with an optimal link length, this can be seen fromt he plot below,</p>
-            <img src="Media\Dynamic\endeff_length_optimization.png" alt="endeff_length_optimization" style="max-width: 100%; height: auto; display: block; margin: 0 auto;" />
+            <img src="media\Dynamic\endeff_length_optimization.png" alt="endeff_length_optimization" style="max-width: 100%; height: auto; display: block; margin: 0 auto;" />
 
             <p>Final Dynamic Simulation: </p>
             <p>Using the optimized link length, simulation reveals the final dynamic performance of the robot's gait cycle for 10 seconds..</p>
-            <img src="Media\Dynamic\final_simulation.gif" alt="final_simulation" style="max-width: 100%; height: auto; display: block; margin: 0 auto;" />
+            <img src="media\Dynamic\final_simulation.gif" alt="final_simulation" style="max-width: 100%; height: auto; display: block; margin: 0 auto;" />
         </p>
     </section>
 
@@ -283,17 +283,17 @@
             After manufacturing the robot and uploading the code onto the microcontroller, the robot was ready to be tested. Similar to simulation studies, the robot was tested in static and dynamic conditions to observe the effect of end effector length on trajectory.
             <p>Static Testing: </p>
             <p>In this testing, the robot was suspended at a height where contact is absent between feet and ground and microcontrolled was turned on, with the help of video recording and a tracker software, the end effector position was tracked as shown below"</p>
-            <img src="Media\Static\experimetnal_track_end_eff.gif" alt="experimetnal_track_end_eff" style="max-width: 100%; height: auto; display: block; margin: 0 auto;" />
+            <img src="media\Static\experimetnal_track_end_eff.gif" alt="experimetnal_track_end_eff" style="max-width: 100%; height: auto; display: block; margin: 0 auto;" />
             <p>Validation: </p>
-            <img src="Media\Static\EndEffectorComparison.png" alt="EndEffectorComparison" style="max-width: 100%; height: auto; display: block; margin: 0 auto;" />
+            <img src="media\Static\EndEffectorComparison.png" alt="EndEffectorComparison" style="max-width: 100%; height: auto; display: block; margin: 0 auto;" />
             <p>As shown above, it can be seen that the error is minimum between the end effector trajectory from simulation and experimental results which validates our robot's design and control.</p>
             <p>Dynamic Testing: </p>
             <p>For this, the robot is suspended at a height using a cable which enables contact between feet and ground and the motion/gait of the robot was observed. The speed of the robot was calculated to compare between simulation and experiment.</p>
             <video style="max-width: 100%; height: auto; display: block; margin: 0 auto;" controls>
-              <source src="Media\Dynamic\finalexp.mp4" type="video/mp4">
+              <source src="media\Dynamic\finalexp.mp4" type="video/mp4">
             </video>
             <p>Performance Comparison: </p>
-            <img src="Media\Dynamic\speedcomparison.png" alt="speedcomparison" style="max-width: 100%; height: auto; display: block; margin: 0 auto;" />
+            <img src="media\Dynamic\speedcomparison.png" alt="speedcomparison" style="max-width: 100%; height: auto; display: block; margin: 0 auto;" />
             <p> The speed of prototype is more than half of that of simulation from the figure, this is because of multiple reasons which include low friction, low speed of servo motors and not ideal support mechanism. Nevertheless, the speed is comparably significant which further validates the kinematics and dynamics of 
             the proposed five bar mechanism based bipedal robot using simulation and prototyping using foldable mechanisms.</p>
         
