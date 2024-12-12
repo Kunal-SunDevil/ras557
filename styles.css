@@ -1,10 +1,10 @@
 /* General Styles */
 body {
-    font-family: 'Roboto', sans-serif; /* Robotic font style */
+    font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
     background-color: #ffffff; /* White background */
-    color: #1a1a1a; /* Dark text for better contrast */
+    color: #000000; /* Black text */
     line-height: 1.6;
 }
 
@@ -29,9 +29,13 @@ main {
     max-width: 900px;
     margin: 20px auto;
     padding: 20px;
-    background-color: #f7f7f7; /* Light gray card-like background */
+    background-color: #ffffff; /* White background */
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+main p {
+    text-align: justify; /* Justify paragraphs */
 }
 
 h2 {
@@ -47,6 +51,7 @@ section {
 
 p, li {
     font-size: 1.1em;
+    color: #000000; /* Black text */
 }
 
 /* List Styling */
@@ -59,21 +64,13 @@ li {
     position: relative;
 }
 
-li::before {
-    content: "⦿"; /* Adds a robotic bullet point */
-    color: #800000; /* Maroon bullet point */
-    font-size: 1.2em;
-    position: absolute;
-    left: -25px;
-}
-
 /* Table Styling */
 table {
     width: 100%;
     border-collapse: collapse;
     margin-top: 20px;
-    background-color: #ffffff;
-    color: #1a1a1a; /* Dark text */
+    background-color: #ffffff; /* White background */
+    color: #000000; /* Black text */
 }
 
 table th, table td {
@@ -90,7 +87,7 @@ table th {
 }
 
 table tr:nth-child(even) {
-    background-color: #f7f7f7; /* Light gray rows for alternating effect */
+    background-color: #f9f9f9; /* Light gray for alternating rows */
 }
 
 /* Footer Styles */
@@ -105,25 +102,11 @@ footer {
     letter-spacing: 1px;
 }
 
-/* Hover Effects */
-header h1:hover, h2:hover, li:hover {
-    color: #c00000; /* Bright maroon hover effect */
-    cursor: pointer;
-}
-
-table th:hover {
-    background-color: #a00000; /* Darker maroon hover */
-}
-
 /* Link Styling */
 a {
     color: #800000; /* Maroon links */
     text-decoration: none;
     transition: color 0.3s ease;
-}
-
-a:hover {
-    color: #a00000; /* Darker maroon hover */
 }
 
 /* Box Shadow Effects */
