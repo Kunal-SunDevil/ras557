@@ -330,6 +330,277 @@
         </table>
     </section> -->
 
+    <section id="summary">
+        <h2>Project Summary</h2>
+        <p>
+            This project successfully developed and implemented a bipedal robot using a 5-bar linkage mechanism, drawing inspiration from bird locomotion biomechanics. The project's journey encompassed several key phases:
+        </p>
+        
+        <h3>Key Achievements</h3>
+        <p>
+            1. <strong>Design & Analysis:</strong> Successfully designed a foldable 5-bar mechanism that effectively mimics bird-like gaits, with comprehensive kinematic analysis validating the mechanism's functionality.
+        </p>
+        <p>
+            2. <strong>Simulation:</strong> Conducted detailed MuJoCo simulations for both static and dynamic conditions, optimizing the end-effector length for maximum walking efficiency. The simulation studies provided crucial insights into gait patterns and mechanical behavior.
+        </p>
+        <p>
+            3. <strong>Manufacturing Evolution:</strong> Implemented two major design iterations:
+            - Rev 1.0: Initial prototype using cardstock-based laminate structure
+            - Rev 2.0: Enhanced version using fiberglass laminate, improving structural integrity while maintaining modularity
+        </p>
+        <p>
+            4. <strong>Experimental Validation:</strong> Successfully validated the design through both static and dynamic testing, with experimental results closely matching simulation predictions, particularly in end-effector trajectories.
+        </p>
+    </section>
+
+    <!-- <section id="discussions">
+        <h2>Discussions</h2>
+        
+        <h3>1. Mujoco Simulation Assumptions</h3>
+
+            <h4>Implementation Overview</h4>
+            <p>
+                The simulation uses MuJoCo's physics engine to model a bipedal robot with a five-bar mechanism. The XML template defines a support structure with a prismatic joint and two five-bar mechanisms (one per leg) with four actuated joints. End-effector tracking is implemented through spherical markers for precise motion analysis.
+            </p>
+
+            <h4>Control System</h4>
+            <p>
+                The walking gait is generated using a sinusoidal control pattern operating at 1 Hz with a quarter-cycle phase difference between legs. Walking gait amplitudes are set at 20 degrees, with base angles at 70 and -60 degrees for respective motors, creating a balanced walking pattern.
+            </p>
+
+            <h4>Key Assumptions</h4>
+            <p>The simulation makes several simplifications:</p>
+            <ul>
+                <li>Perfectly rigid bodies instead of flexible materials</li>
+                <li>Basic damping for joint dynamics</li>
+                <li>Simplified friction coefficients</li>
+                <li>Idealized support structure without friction</li>
+                <li>Perfect motor responses without delays</li>
+            </ul>
+
+            <h4>Real-World Differences</h4>
+            <p>Physical implementation differs from simulation in several ways:</p>
+            <ul>
+                <li>Fiberglass structure exhibits flexibility</li>
+                <li>Complex joint friction and backlash effects</li>
+                <li>Variable surface interactions</li>
+                <li>Motor limitations and response delays</li>
+                <li>Control system latencies</li>
+                <li>Support structure dynamics</li>
+            </ul>
+
+            <h4>Expected Performance</h4>
+            <p>Real-world performance will likely show:</p>
+            <ul>
+                <li>Lower operational speed due to mechanical losses</li>
+                <li>Increased movement variation</li>
+                <li>Higher energy requirements</li>
+                <li>Greater end-effector position error</li>
+                <li>Need for control system tuning</li>
+            </ul>
+            
+            <p>The simulation provides valuable design insights while acknowledging these practical limitations.</p>
+
+        <h3>2. Design Variable Analysis</h3>
+            <p>
+                Our primary design variable was the end-effector length of the five-bar mechanism. This choice was strategically motivated by several factors. First, the end-effector length directly influences the robot's gait trajectory and walking efficiency. Second, it represents a parameter that could be readily modified in both simulation and physical prototype, making it ideal for comparative analysis. Third, this variable significantly impacts the robot's overall performance without requiring fundamental changes to the core mechanism design.
+            </p>
+        
+            <h3>3. Optimization Methodology</h3>
+            <p>
+                We employed a systematic global parameter sweep approach to understand how end-effector length affects robot performance. The simulation framework used MuJoCo to test end-effector lengths across a predetermined range, measuring the distance traveled by the robot over a fixed 10-second period.
+            </p>
+            
+            <p>This approach was chosen for several key advantages:</p>
+            <ul>
+                <li>It provided a clear, quantifiable metric (distance traveled) that directly correlates with walking efficiency</li>
+                <li>The 10-second timeframe offered sufficient duration to observe stable walking patterns while maintaining computational efficiency</li>
+                <li>The parameter sweep allowed us to identify not just local optima but understand the broader relationship between end-effector length and performance</li>
+            </ul>
+        
+            <h3>4. Results Analysis and Physical Correlation</h3>
+            <p>
+                The simulation results aligned with physical expectations in several key aspects. The optimal end-effector length identified through simulation demonstrated improved walking efficiency in the physical prototype, validating our modeling approach. This correlation can be attributed to:
+            </p>
+            <ul>
+                <li>The accurate representation of the five-bar mechanism's kinematics in our simulation model</li>
+                <li>Careful consideration of physical constraints and joint limitations</li>
+                <li>The implementation of realistic motor torque limits and friction coefficients</li>
+            </ul>
+            <p>
+                However, we observed that the physical prototype achieved approximately 50% of the simulated speed, indicating some divergence between model and reality.
+            </p>
+        
+        <h3>5. Sources of Error and Sim-to-Real Gap</h3>
+        
+            <h4>Material Properties</h4>
+            <p>
+                The simulation assumed ideal rigid bodies, while our physical prototype exhibited some flexibility in the fiberglass structure. Additionally, joint friction and damping effects were simplified in the simulation model.
+            </p>
+        
+            <h4>Environmental Factors</h4>
+            <p>
+                Surface contact modeling in simulation didn't fully capture the complex friction interactions present in the real world. The support mechanism in the physical prototype introduced additional dynamics not present in the simulation.
+            </p>
+        
+            <h4>Actuation Differences</h4>
+            <p>
+                Servo motor response characteristics and delays weren't fully captured in the simulation. The simulation assumed perfect torque control, while physical servos have inherent limitations.
+            </p>
+        
+            <h4>Recommendations for Closing Sim-to-Real Gap</h4>
+            <ul>
+                <li>Implementing more sophisticated contact models in simulation</li>
+                <li>Including detailed servo motor dynamics in the simulation model</li>
+                <li>Developing better system identification methods for material properties</li>
+                <li>Incorporating compliance modeling for the fiberglass structure</li>
+            </ul>
+    
+        <h3>6. Version 2.0 Recommendations</h3>
+        
+            <h4>Structural Enhancements</h4>
+            <ul>
+                <li>Develop a hybrid material system that better balances rigidity and weight</li>
+                <li>Implement improved joint designs to reduce friction and increase durability</li>
+                <li>Design a more sophisticated support mechanism for better stability during walking</li>
+            </ul>
+        
+            <h4>Control System Updates</h4>
+            <ul>
+                <li>Integrate closed-loop feedback control using position sensors</li>
+                <li>Implement adaptive gait patterns based on real-time performance metrics</li>
+                <li>Develop more sophisticated motor control algorithms</li>
+            </ul>
+        
+            <h4>Design Improvements</h4>
+            <ul>
+                <li>Create a more compact body design to reduce overall weight</li>
+                <li>Implement quick-change mechanisms for easier experimental testing</li>
+                <li>Add modular attachment points for sensors and additional components</li>
+            </ul>
+        
+            <h4>Testing Capabilities</h4>
+            <ul>
+                <li>Integrate force sensors in the feet for ground contact force measurement</li>
+                <li>Add IMU sensors for better stability control and gait analysis</li>
+                <li>Implement real-time data logging for performance analysis</li>
+            </ul>
+    </section> -->
+
+    <!-- <section id="discussions">
+        <h2>Discussions</h2>
+    
+        <h3>1. Simulation Framework</h3>
+        <p>
+            Our MuJoCo simulation implemented a bipedal robot using a five-bar mechanism with prismatic joint support. The control system generates walking gaits through 1 Hz sinusoidal patterns with quarter-cycle phase differences between legs, using 20-degree amplitudes and base angles of 70/-60 degrees.
+        </p>
+    
+        <h4>Key Assumptions and Real-World Differences</h4>
+        <ul>
+            <li>Simulation assumed rigid bodies, simplified friction, and ideal motor responses</li>
+            <li>Physical implementation revealed material flexibility, complex friction patterns, and motor limitations</li>
+            <li>Support structure dynamics and surface interactions added complexity in real testing</li>
+        </ul>
+    
+        <h3>2. Design Optimization</h3>
+        <p>
+            We focused on end-effector length optimization due to its direct impact on gait efficiency and ease of modification. The parameter sweep over 10-second trials provided quantifiable performance metrics and revealed optimal configurations for walking distance.
+        </p>
+    
+        <h3>3. Performance Analysis</h3>
+        <p>
+            The physical prototype achieved 50% of simulated speed, with differences attributed to:
+        </p>
+        <ul>
+            <li>Material flexibility in fiberglass structure versus rigid-body assumptions</li>
+            <li>Complex joint dynamics and friction effects</li>
+            <li>Servo motor limitations and response delays</li>
+        </ul>
+    
+        <h3>4. Future Improvements</h3>
+        
+        <h4>Technical Enhancements</h4>
+        <ul>
+            <li>Implement hybrid materials for better rigidity-to-weight ratio</li>
+            <li>Develop closed-loop feedback control with position sensing</li>
+            <li>Add force and IMU sensors for improved stability</li>
+        </ul>
+    
+        <h4>5. Simulation Refinements</h4>
+        <ul>
+            <li>Enhanced contact modeling and material compliance simulation</li>
+            <li>Improved motor dynamics representation</li>
+            <li>Better system identification methods</li>
+        </ul>
+    </section> -->
+
+    <section id="discussions">
+        <h2>Discussions</h2>
+    
+        <h3>1. Jupyter Notebook Implementation</h3>
+        <p>
+            The notebook implements a MuJoCo simulation of our bipedal robot using an XML template defining the five-bar mechanism structure. The robot model includes a support beam with a prismatic joint and four actuated joints for the legs. We simplified the model by assuming perfectly rigid bodies, basic damping in joints, and idealized friction coefficients. The control system uses a 1 Hz sinusoidal pattern with quarter-cycle phase differences between legs, operating at 20-degree amplitudes with base angles of 70/-60 degrees. These simplifications differ from real-world conditions where material flexibility, complex friction patterns, and motor response limitations significantly affect performance.
+        </p>
+    
+        <h3>2. Design Variable Selection</h3>
+        <p>
+            We chose to optimize the end-effector length as our primary design variable because it directly influences gait trajectory and walking efficiency. This parameter could be readily modified in both simulation and physical prototype without requiring fundamental changes to the core mechanism design, making it ideal for comparative analysis and practical implementation.
+        </p>
+    
+        <h3>3. Optimization Approach</h3>
+        <p>
+            Our optimization employed a global parameter sweep across various end-effector lengths, measuring distance traveled over 10-second trials. This approach was selected because it provided a clear, quantifiable metric for walking efficiency while allowing sufficient time to observe stable gait patterns. The comprehensive sweep helped identify not just local optima but revealed the broader relationship between end-effector length and overall performance.
+        </p>
+    
+        <h3>4. Results Analysis</h3>
+        <p>
+            The physical prototype achieved approximately 50% of the simulated speed with the optimized end-effector length. This alignment validates our basic modeling approach while highlighting expected real-world limitations. The reduced performance primarily stems from material flexibility, joint friction, and motor response characteristics not fully captured in the simulation model.
+        </p>
+    
+        <h3>5. Error Sources and Improvements</h3>
+        <p>
+            Leading error sources include material flexibility in the fiberglass structure, complex joint friction patterns, and servo motor limitations. To close the sim-to-real gap, we recommend implementing more sophisticated contact models, incorporating detailed motor dynamics in simulation, and developing better system identification methods for material properties. Adding compliance modeling for the fiberglass structure would also improve simulation accuracy.
+        </p>
+    
+        <h3>6. Version 2.0 Development</h3>
+        <p>
+            For the next iteration, we propose developing a hybrid material system balancing rigidity and weight, implementing closed-loop feedback control with position sensors, and adding force and IMU sensors for improved stability analysis. The design would feature a more compact body, quick-change mechanisms for testing, and enhanced data logging capabilities. These improvements would address current limitations while expanding research capabilities.
+        </p>
+    </section>
+
+    <section id="conclusion">
+        <h2>Conclusions and Future Implications</h2>
+        <p>
+            The project demonstrates the viability of using foldable mechanisms in bipedal robotics, with several significant outcomes:
+        </p>
+        
+        <ul>
+            <li>
+                <strong>Technical Achievement:</strong> Successfully bridged the gap between theoretical design and practical implementation, achieving functional bipedal locomotion using a novel 5-bar mechanism design.
+            </li>
+            <li>
+                <strong>Validation of Approach:</strong> The close correlation between simulation and experimental results validates both the design methodology and the manufacturing approach.
+            </li>
+            <li>
+                <strong>Material Innovation:</strong> The transition from cardstock to fiberglass demonstrated the importance of material selection in foldable robotics, highlighting the trade-offs between structural integrity and manufacturing complexity.
+            </li>
+            <li>
+                <strong>Performance Insights:</strong> While achieving more than 50% of the simulated speed in real-world testing, the project identified key factors affecting performance, including friction coefficients and servo motor limitations.
+            </li>
+        </ul>
+    
+        <h3>Future Research Directions</h3>
+        <p>
+            This project opens several promising avenues for future research:
+        </p>
+        
+        <ul>
+            <li>Optimization of the support mechanism to improve dynamic stability</li>
+            <li>Integration of advanced control algorithms for enhanced gait adaptation</li>
+            <li>Investigation of alternative materials balancing rigidity and weight</li>
+            <li>Development of more sophisticated actuation systems to bridge the simulation-reality gap</li>
+        </ul>
+    </section>
     <section id="team">
         <h2>Team Members</h2>
         <ul>
